@@ -69,9 +69,9 @@ function renderFlashcards(cards) {
     const div = document.createElement("div");
     div.classList.add("flashcard");
     div.innerHTML = `
-      <p><strong>Subject:</strong> ${card.subject}</p>
-      <p><strong>Q:</strong> ${card.question}</p>
-      <p><strong>A:</strong> ${card.answer}</p>
+      <p><strong>Sub:</strong> ${card.subject}</p>
+      <p><strong>Que:</strong> ${card.question}</p>
+      <p><strong>Ans:</strong> ${card.answer}</p>
       <div class="flashcard-actions">
         <button class="edit-btn" data-id="${card.id}">✏️ Edit</button>
         <button class="delete-btn" data-id="${card.id}">🗑️ Delete</button>
