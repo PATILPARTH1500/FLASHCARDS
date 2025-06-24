@@ -74,15 +74,45 @@
   </ul>
 </section>
 
+
+<!-- ========== DELETE MODAL ========== -->
+<div id="deleteModal" class="modal hidden">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this flashcard?</p>
+        <button id="confirmDelete">Yes, delete</button>
+        <button id="cancelDelete">Cancel</button>
+    </div>
+</div>
+
+<!-- ========== EDIT MODAL ========== -->
+<div id="editModal" class="modal hidden">
+    <div class="modal-content edit">
+        <h3>Edit Flashcard</h3>
+        <input type="text" id="editQuestion" placeholder="Question" />
+        <input type="text" id="editAnswer" placeholder="Answer" />
+        <select id="editSubject">
+            <option value="" disabled>Select subject</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Math">Math</option>
+            <option value="English">English</option>
+        </select>
+        <button id="saveEditBtn">💾 Save</button>
+        <button id="cancelEditBtn">Cancel</button>
+    </div>
+</div>
+
+<!-- Toast Message -->
+<div id="toast" class="toast"></div>
+
+
 <!-- ========== FOOTER ========== -->
 <footer>
   <p>© 2025 FlashDeck. Helping students prepare smarter.</p>
   <p>Made by Parth Patil • All flashcards are securely saved to the cloud ☁️</p>
 </footer>
-
-
-
-    <!-- JAVASCRIPT -->
+<!-- JAVASCRIPT -->
     <script src="app.js" type="module"></script>
 </body>
 </html>
