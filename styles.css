@@ -2,14 +2,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box;}
 
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f7f9fc;
   color: #333;
-  padding: 0 16px;
 }
 
 /* Navbar */
@@ -31,10 +29,17 @@ body {
 }
 
 .navbar-links a {
-  margin-left: 20px;
+  margin: 15px;;
+  margin-left: 90px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #000000;
+  font-weight: 600;
+}
+
+.navbar-links a:hover {
+  color: #a3d0ff;
+  transition:0.5s ease;
+  font-size: 1.2rem;
 }
 
 .hamburger {
@@ -50,18 +55,48 @@ section {
 }
 
 /* Profile Section */
-.profile-section {
-  background: #e3f2fd;
+
+.profile-section-grid {
+  min-height: 100vh;
+  padding: 40px 16px;
   display: flex;
-  align-items: center;
+  gap: 350px;
+  align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  background: #e3f2fd;
+}
+
+.profile-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: white;
+  padding: 90px;
+  height:500px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.addcard-box {
+  flex: 1 1 300px;
+  max-width: 500px;
+  height: 500px;
+  background: rgb(255, 255, 255);
+  padding: 90px;
+  border-radius:30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.addcard-box h3 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
   text-align: center;
 }
 
 .profile-avatar {
-  width: 64px;
-  height: 64px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ccc;
@@ -100,6 +135,41 @@ section {
 .flashcard:hover {
   transform: scale(1.03);
 }
+
+.flashcard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.flashcard-form input,
+.flashcard-form select,
+.flashcard-form button {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.flashcard-form button {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.flashcard-form button:hover {
+  background: #0056cc;
+}
+
 
 /* Suggested Section */
 .suggested-section ul {

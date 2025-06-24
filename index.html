@@ -24,17 +24,40 @@
 </nav>
 
 <!-- ========== PROFILE SUMMARY ========== -->
-<section id="profile" class="profile-section">
-  <img src="assets/avatar-placeholder.png" alt="User Avatar" class="profile-avatar">
-  <div class="profile-info">
-    <h2>Hello, Parth 👋</h2>
-    <p>You’ve created <strong>0</strong> flashcards.</p>
-    <p>Subjects: Physics (0), Chemistry (0), Biology (0)</p>
+<section id="profile" class="profile-section-grid">
+  <!-- LEFT: PROFILE INFO -->
+  <div class="profile-box">
+    <img src="/assets/images/avatar.jpg" alt="User Avatar" class="profile-avatar">
+    <div class="profile-info">
+      <h2>Hello, Parth 👋</h2>
+      <p>You’ve created <strong>0</strong> flashcards.</p>
+      <p>Subjects: Physics (0), Chemistry (0), Biology (0)</p>
+    </div>
+  </div>
+
+  <!-- RIGHT: ADD FLASHCARD FORM -->
+  <div class="addcard-box">
+    <h3>Create a New Flashcard</h3>
+    <div class="flashcard-form">
+      <input type="text" id="questionInput" placeholder="Enter question..." required />
+      <input type="text" id="answerInput" placeholder="Enter answer..." required />
+      <select id="subjectInput">
+        <option value="" disabled selected>Select subject</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Biology">Biology</option>
+        <option value="Math">Math</option>
+        <option value="English">English</option>
+      </select>
+      <button id="addCardBtn">➕ Add Flashcard</button>
+    </div>
   </div>
 </section>
 
+
 <!-- ========== FLASHCARDS SECTION ========== -->
 <section class="flashcard-container" id="flashcards">
+    
   <h3>Your Flashcards</h3>
   <div id="flashcardGrid" class="flashcard-grid">
     <!-- Cards will be injected here by JS -->

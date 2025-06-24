@@ -6,44 +6,6 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Dummy flashcards for UI testing
-const dummyCards = [
-  {
-    question: "What is Newton’s 2nd Law?",
-    answer: "F = ma",
-    subject: "Physics"
-  },
-  {
-    question: "What is the atomic number of Oxygen?",
-    answer: "8",
-    subject: "Chemistry"
-  },
-  {
-    question: "What is DNA?",
-    answer: "Deoxyribonucleic Acid",
-    subject: "Biology"
-  },
-  {
-    question: "What is DNA?",
-    answer: "Deoxyribonucleic Acid",
-    subject: "Biology"
-  },
-  {
-    question: "What is DNA?",
-    answer: "Deoxyribonucleic Acid",
-    subject: "Biology"
-  },
-  {
-    question: "What is DNA?",
-    answer: "Deoxyribonucleic Acid",
-    subject: "Biology"
-  },
-  {
-    question: "What is DNA?",
-    answer: "Deoxyribonucleic Acid",
-    subject: "Biology"
-  }
-];
 
 function renderFlashcards(cards) {
   const container = document.getElementById("flashcardGrid");
@@ -81,4 +43,40 @@ function updateProfileStats(cards) {
 // Initial load
 document.addEventListener("DOMContentLoaded", () => {
   renderFlashcards(dummyCards); // Replace with Firestore later
+});
+
+
+const questionInput = document.getElementById("questionInput");
+const answerInput = document.getElementById("answerInput");
+const subjectInput = document.getElementById("subjectInput");
+const addCardBtn = document.getElementById("addCardBtn");
+
+let cards = []; // Stores flashcards in-memory (for now)
+
+// Add Flashcard
+addCardBtn.addEventListener("click", () => {
+  const question = questionInput.value.trim();
+  const answer = answerInput.value.trim();
+  const subject = subjectInput.value;
+
+  if (!question || !answer || !subject) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const newCard = {
+    question,
+    answer,
+    subject,
+    id: Date.now()
+  };
+
+  cards.push(newCard);
+  localStorage.setItem("flashcards", JSON.stringify(cards));
+  renderFlashcards(cards);
+
+  // Clear form
+  questionInput.value = "";
+  answerInput.value = "";
+  subjectInput.value = "";
 });
