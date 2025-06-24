@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- STYLING -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="navbar-logo">📚 FlashDeck</div>
+  <div class="navbar-links" id="navLinks">
+  <a href="#profile">Home</a>
+  <a href="#flashcards">Flashcards</a>
+  <a href="#suggested">Suggestions</a>
+  <a href="profile.html">Profile</a>
+</div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+<!-- ========== PROFILE SUMMARY ========== -->
+<section id="profile" class="profile-section">
+  <img src="assets/avatar-placeholder.png" alt="User Avatar" class="profile-avatar">
+  <div class="profile-info">
+    <h2>Hello, Parth 👋</h2>
+    <p>You’ve created <strong>0</strong> flashcards.</p>
+    <p>Subjects: Physics (0), Chemistry (0), Biology (0)</p>
+  </div>
+</section>
+
+<!-- ========== FLASHCARDS SECTION ========== -->
+<section class="flashcard-container" id="flashcards">
+  <h3>Your Flashcards</h3>
+  <div id="flashcardGrid" class="flashcard-grid">
+    <!-- Cards will be injected here by JS -->
+  </div>
+</section>
+
+<!-- ========== SUGGESTED TOPICS SECTION ========== -->
+<section id="suggested" class="suggested-section">
+  <h3>Suggested Topics to Add</h3>
+  <ul>
+    <li>🧪 Organic Chemistry: Isomers</li>
+    <li>📐 Geometry: Circle Theorems</li>
+    <li>🧬 Genetics: Mendel’s Laws</li>
+  </ul>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>© 2025 FlashDeck. Helping students prepare smarter.</p>
+  <p>Made by Parth Patil • All flashcards are securely saved to the cloud ☁️</p>
+</footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js" type="module"></script>
+</body>
+</html>
