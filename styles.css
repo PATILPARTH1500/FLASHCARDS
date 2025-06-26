@@ -26,10 +26,11 @@ body {
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
+  padding-left: 50px;
 }
 
 .navbar-links a {
-  margin: 15px;;
+  margin: 15px;
   margin-left: 90px;
   text-decoration: none;
   color: #000000;
@@ -38,7 +39,7 @@ body {
 
 .navbar-links a:hover {
   color: #a3d0ff;
-  transition:0.5s ease;
+  transition: 0.5s ease;
   font-size: 1.2rem;
 }
 
